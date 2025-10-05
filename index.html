@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Task Manager</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header>Task Manager</header>
+
+<div class="container">
+
+  <div class="main-row">
+    <div class="left-side">
+      <div class="card">
+        <h2>Add New Task</h2>
+        <input type="text" id="taskName" placeholder="Task name" />
+        <input type="number" id="taskTime" placeholder="Duration (minutes)" />
+        <input type="datetime-local" id="taskDate" />
+        <select id="taskPriority">
+          <option value="high">High Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="low">Low Priority</option>
+        </select>
+        <button class="add-btn" onclick="addTask()">Add Task</button>
+        <button class="add-btn" onclick="startAll()">▶ Start All Tasks</button>
+        <button class="add-btn" onclick="endAll()">⏹ End All Tasks</button>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <div class="card">
+        <h2>Current Task</h2>
+        <div id="currTask">No task running</div>
+        <div id="clock">00:00:00</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Task List</h2>
+    <div class="task-list" id="listEl"></div>
+  </div>
+
+  <div class="progress-summary-row">
+    <div class="card">
+      <h2>Task Progress</h2>
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="barEl"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Task Summary</h2>
+      <div class="summary" id="sumEl">
+        <p>Total Tasks: 0</p>
+        <p>Completed: 0</p>
+        <p>Pending: 0</p>
+        <p>Skipped: 0</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
